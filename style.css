@@ -1,0 +1,35 @@
+label.checkbox input{
+	display: none;
+}
+
+label.checkbox .checkbox{
+	display: inline-block;
+	width: 40px;
+	height: 16px;
+	background: rgba(0, 0, 0, .26);
+	position: relative;
+	border-radius: 10px;
+	transition: 300ms background;
+}
+
+label.checkbox .checkbox span{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: -2px;
+	left: 0;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 1px 5px 0 rgba(0,0,0,.4);
+	transition: 300ms left,background;
+
+}
+label.checkbox input:checked+.checkbox
+{
+	background:#83b1f4;
+}
+label.checkbox input:checked+.checkbox span
+{background:#4285f4;
+	left:20px;
+	
+}

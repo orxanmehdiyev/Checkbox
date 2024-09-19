@@ -1,0 +1,5 @@
+<?php 
+
+
+echo "ayxan Mehdiyev";
+ ?>

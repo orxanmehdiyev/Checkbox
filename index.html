@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<label class="checkbox">
+		<input id="15" onchange="kontrol()" type="checkbox" name="rule"> 
+		<span class="checkbox"> 
+			<span></span>
+		</span>
+	</label>
+
+	<div id="sonuc"></div>
+	<script type="text/javascript">
+
+function kontrol(){
+var a=event.target;
+var x=a.id;
+var xhttp=new XMLHttpRequest();
+console.log(xhttp);
+
+  xhttp.open("POST","sssss.php",true);// emeliyat edilecek seyfe secilir
+  xhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");// elaveler post ucun gonderilir
+  xhttp.send("aa=");    // adi ve id si gonderilir
+xhttp.onreadystatechange=function(){
+    if(this.readyState==4 && this.status==200){
+      document.getElementById('sonuc').innerHTML=this.responseText;
+    }else{
+       document.getElementById('sonuc').innerHTML="Problem";
+  }
+}
+
+};
+	</script>
+
+</body>
+</html>
